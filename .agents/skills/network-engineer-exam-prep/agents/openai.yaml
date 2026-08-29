@@ -1,0 +1,7 @@
+interface:
+  display_name: "软考网络工程师备考助手"
+  short_description: "面向网络工程师中级考试的计划、答疑、刷题与错题复盘"
+  default_prompt: "使用 $network-engineer-exam-prep 解析这道网络工程师题，并更新我的备考进度。"
+
+policy:
+  allow_implicit_invocation: true
