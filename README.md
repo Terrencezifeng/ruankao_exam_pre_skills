@@ -18,6 +18,7 @@
 - 解析华为或思科配置题，并避免混用厂商命令
 - 组织 240 分钟机考模拟并分析两科风险
 - 自动记录学习会话、错题原因、掌握度和复习日期
+- 按知识域检索经过校正的本地备考笔记，并把错题与笔记章节关联
 - 跨周或存在到期错题时，自动指出当前最优先的 3 个问题
 - 每周自动复盘完成情况、薄弱点、到期错题和下周 4 小时安排
 
@@ -84,6 +85,12 @@ study/
 
 首次错题默认安排在第 1、3、7、14 天复习。同一来源、题号和核心考点相同的错题会更新原记录，而不是重复添加。
 
+## 备考笔记
+
+原创速记位于 [notes/README.md](notes/README.md)，按数据通信、局域网、IP、路由交换、安全、Linux 与服务、网络管理与规划、计算和专业英语分类。Skill 会根据题目只读取相关章节，周复盘也会把建议动作链接到对应笔记。
+
+外部资料只用作选题和查漏线索。20 份参考 PDF 的页数、适用主题和校正风险见 [来源目录](notes/source-catalog.md)；由于参考仓库未提供许可证，本项目不复制或打包原 PDF。
+
 ## 周期复盘
 
 - 每次新项目会话首次使用 Skill 时，会检查是否跨周、是否有到期错题、是否新增高风险错误，以及本周计划是否存在无法按时完成的风险。
@@ -101,8 +108,21 @@ study/
 │   └── references/
 │       ├── coaching-workflows.md
 │       ├── exam-scope.md
+│       ├── notes-routing.md
 │       ├── review-workflows.md
 │       └── study-plan.md
+├── notes/
+│   ├── README.md
+│   ├── 01-network-basics-and-data-communication.md
+│   ├── 02-lan-vlan-stp-and-wlan.md
+│   ├── 03-ip-and-transport.md
+│   ├── 04-routing-switching-and-huawei-vrp.md
+│   ├── 05-network-security.md
+│   ├── 06-linux-and-network-services.md
+│   ├── 07-management-troubleshooting-and-design.md
+│   ├── 08-calculation-quick-reference.md
+│   ├── 09-professional-english.md
+│   └── source-catalog.md
 ├── study/
 └── README.md
 ```
@@ -124,6 +144,7 @@ Skill 位于 `.agents/skills/`，可被 Codex 在本项目中自动发现；也�
 
 - [xiaomabenten/network_engineer](https://github.com/xiaomabenten/network_engineer)：用于定位教材、历年题、笔记、实验和机考资料。
 - [honlu/arch-exam-prep](https://github.com/honlu/arch-exam-prep)：借鉴其引导式学习和进度追踪思路，不采用架构师考试内容。
+- [youdianniubi/ruankao-note](https://github.com/youdianniubi/ruankao-note)：用于定位协议、计算、配置、Linux、应用技术和英语等笔记主题；内容经校正后重新组织，不复制原 PDF。
 
 本项目不复制或打包上述仓库中的 PDF、视频和题库。外部资料及其版权、许可证仍归原作者或发布者所有。
 

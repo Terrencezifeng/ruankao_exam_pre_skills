@@ -15,7 +15,7 @@ metadata:
 2. 若存在 `study/profile.md`、`study/weekly-plan.md`、`study/mistakes.md`、`study/review-state.md`，先读取与当前请求及入口复盘有关的部分；不要为了回答单题加载全部会话记录。
 3. 执行入口复盘判断：当前 ISO 周与 `review-state.md` 中的上次入口检查周不同，或 `mistakes.md` 存在复习日期不晚于今天且尚未完成的条目时，读取 [references/review-workflows.md](references/review-workflows.md)，自动给出“当前最优先的 3 个问题”并更新复盘状态。同一周且没有新到期项时不重复提示。
 4. 识别用户意图：知识点讲解、题目解析、训练、计划调整、模拟复盘或进度回顾。
-5. 按下方路由读取且只读取相关参考文件。
+5. 按下方路由读取且只读取相关参考文件。涉及具体考点时，先通过 [references/notes-routing.md](references/notes-routing.md) 定位项目笔记，不要加载整个 `notes/`。
 
 ## 参考文件路由
 
@@ -23,6 +23,7 @@ metadata:
 - 涉及题目、概念、计算、配置、模拟或错题记录时，读取 [references/coaching-workflows.md](references/coaching-workflows.md)。
 - 涉及本周任务、剩余时间、补课顺序或冲刺安排时，读取 [references/study-plan.md](references/study-plan.md)。
 - 涉及跨周检查、到期错题、每周复盘、优先级推荐或自动化复盘时，读取 [references/review-workflows.md](references/review-workflows.md)。
+- 涉及备考笔记、考点速查、错题补课材料或复盘推荐方向时，读取 [references/notes-routing.md](references/notes-routing.md)。
 
 ## 核心行为
 
@@ -32,6 +33,7 @@ metadata:
 - 网络设备命令从题干识别厂商，华为与思科语法不得混用。题干未指定时采用华为口径，并在命令块前明确说明。
 - Linux 命令和编辑示例默认使用 `vim`。
 - 不复制、打包或声称内置外部仓库中的 PDF、视频和题库；可将它们作为用户自行访问的资料索引。训练题应原创，避免大段复现真题或教材。
+- 项目 `notes/` 是经过校正的复习导航，不是官方标准。若笔记、题目答案与官方教程、RFC 或厂商文档冲突，指出冲突并采用更高优先级来源，不要为了迎合笔记而修改结论。
 
 ## 自动记录边界
 
@@ -42,6 +44,7 @@ metadata:
 - 按错误证据更新掌握度和 `study/weekly-plan.md`。每周任务仍不得超过 240 分钟；新增任务必须替换低收益任务，不能只叠加。
 - 入口检查与每周复盘的时间、触发原因和上次推荐写入 `study/review-state.md`，用于防止同一批建议反复出现。
 - 只修改 `study/`。不得自动修改本技能、其他项目文件或用户的原始备考资料。
+- 正常答疑与复盘可读取并链接 `notes/`，但不得自动改写笔记；只有用户明确要求整理或更新笔记时才修改。
 - 写入后用一句话告诉用户记录了什么以及下一次复习日期，不展示冗长文件差异。
 
 ## 完成标准
