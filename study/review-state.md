@@ -1,16 +1,16 @@
 # 复盘状态
 
-- `last_entry_check`: 2026-08-29
-- `last_entry_week`: 2026-W35
-- `last_weekly_review`: never
-- `next_scheduled_review`: 2026-08-30 20:30 Asia/Shanghai
-- `last_trigger`: initialization
-- `last_priority_keys`: [first-diagnostic, data-communication-baseline, ipv4-subnet-baseline]
+- `last_entry_check`: 2026-08-31
+- `last_entry_week`: 2026-W36
+- `last_weekly_review`: 2026-08-30
+- `next_scheduled_review`: 2026-09-06 20:30 Asia/Shanghai
+- `last_trigger`: new-high-risk
+- `last_priority_keys`: [M-20260829-001, M-20260831-001, first-diagnostic]
 
 ## 当前三个优先问题
 
-1. **完成首次短诊断**：尚无基础知识和应用技术估分，无法可靠判断薄弱点。建议 45 分钟。
-2. **建立数据通信基线**：目前只有初始化掌握度，没有编码检错题证据。建议 60 分钟。
-3. **建立 IPv4 子网基线**：目前没有子网划分、VLSM 或路由聚合的做题证据。建议 90 分钟。
+1. **复习 `/22` 地址块边界**：错题 M-20260829-001 的首个节点已于 2026-08-30 到期，当前掌握度为 1。先口算块大小，再完成一道 `/21` 或 `/22` 变式题，建议 10 分钟；从第 1 周原有 90 分钟 IPv4 训练中划出，不增加预算。
+2. **用变式题巩固 CRC**：M-20260831-001 已在同题复做中纠正，错题掌握度升至 2，但尚无新数据和生成多项式下的迁移证据。建议 2026-09-01 用 10 分钟完成一题变式并回除校验；从原 60 分钟数据通信任务中划出，不增加预算。
+3. **完成首次短诊断**：基础知识和应用技术估分仍为待诊断，无法确定两科距离 45 分底线的风险。建议按原计划完成 45 分钟短诊断。
 
-三项共 195 分钟，保留本周 45 分钟用于复盘，合计 240 分钟。
+三项共 65 分钟；全部纳入第 1 周原有 240 分钟预算，其中 CRC 复习占用原数据通信任务 10 分钟，不叠加新任务。
