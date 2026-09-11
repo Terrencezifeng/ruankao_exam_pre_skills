@@ -12,7 +12,7 @@ metadata:
 ## 每次开始
 
 1. 将包含本技能的项目目录视为项目根目录，只在其 `study/` 下维护学习数据。
-2. 若存在 `study/profile.md`、`study/weekly-plan.md`、`study/mistakes.md`、`study/review-state.md`，先读取与当前请求及入口复盘有关的部分；不要为了回答单题加载全部会话记录。
+2. 若存在 `study/profile.md`、`study/weekly-plan.md`、`study/mistakes.md`、`study/time-log.md`、`study/review-state.md`，先读取与当前请求及入口复盘有关的部分；不要为了回答单题加载全部会话记录。
 3. 执行入口复盘判断：当前 ISO 周与 `review-state.md` 中的上次入口检查周不同，或 `mistakes.md` 存在复习日期不晚于今天且尚未完成的条目时，读取 [references/review-workflows.md](references/review-workflows.md)，自动给出“当前最优先的 3 个问题”并更新复盘状态。同一周且没有新到期项时不重复提示。
 4. 识别用户意图：知识点讲解、题目解析、训练、计划调整、模拟复盘或进度回顾。
 5. 按下方路由读取且只读取相关参考文件。涉及具体考点时，先通过 [references/notes-routing.md](references/notes-routing.md) 定位项目笔记，不要加载整个 `notes/`。
@@ -40,6 +40,7 @@ metadata:
 在完成题目解析、知识讲解、训练、模拟复盘或计划调整后，自动更新 `study/`；寒暄、纯管理问题和未完成的题目转写不记录。
 
 - 当天会话写入或合并到 `study/sessions/YYYY-MM-DD.md`。
+- 学习时长按 [references/coaching-workflows.md](references/coaching-workflows.md) 的可核验计时规则写入 `study/time-log.md`；用户自报优先，240 分钟只是每周计划预算，不是实际时长上限。
 - 新错题追加到 `study/mistakes.md`；同一来源、题号和核心考点相同则更新原记录，不重复追加。
 - 按错误证据更新掌握度和 `study/weekly-plan.md`。每周任务仍不得超过 240 分钟；新增任务必须替换低收益任务，不能只叠加。
 - 入口检查与每周复盘的时间、触发原因和上次推荐写入 `study/review-state.md`，用于防止同一批建议反复出现。
